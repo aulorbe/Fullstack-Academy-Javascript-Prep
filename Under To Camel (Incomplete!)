@@ -1,0 +1,32 @@
+/* 
+
+**** not finished yet! *****
+
+Fullstack Academy - JavaScript JumpStart
+
+Challenge - under_score to camelCase
+
+Write a function to convert a variable name from under_score format to camelCase.
+Make sure you support an unlimited number of underscores in the input!
+*/
+
+// Examples:
+
+// underToCamel("first_name"); // should return firstName
+// underToCamel("income_tax"); // should return incomeTax
+
+// Write Code Below
+
+function underToCamel(str) {
+	
+	for (var i = 0; i < str.length; i++) {
+		
+		if (str[i] === "_") {
+			console.log(str[i + 1])
+		}
+		
+	}
+	
+	
+	
+}
