@@ -1,7 +1,4 @@
 /* 
-
-**** not finished yet! *****
-
 Fullstack Academy - JavaScript JumpStart
 
 Challenge - under_score to camelCase
@@ -17,16 +14,28 @@ Make sure you support an unlimited number of underscores in the input!
 
 // Write Code Below
 
-function underToCamel(str) {
+function underToCamel(underName) {
 	
-	for (var i = 0; i < str.length; i++) {
+	var foundUnder = false; 
+	var camelCaseOutput = "";
+	for (var i = 0; i < underName.length; i++) {
+		debugger;
 		
-		if (str[i] === "_") {
-			console.log(str[i + 1])
+		if(underName[i] === "_") {
+			foundUnder = true;
+		} else {
+			if (foundUnder) {
+				camelCaseOutput += underName[i].toUpperCase();
+				foundUnder = false;
+			} else {
+				camelCaseOutput += underName[i];
+			}
 		}
 		
 	}
 	
-	
+return camelCaseOutput;	
 	
 }
+
+underToCamel("first_name"); 
